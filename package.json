@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/IOT-boy/project-template/issues"
   },
-  "homepage": "https://github.com/IOT-boy/project-template#readme"
+  "homepage": "https://github.com/IOT-boy/project-template#readme",
+  "devDependencies": {
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
 }
