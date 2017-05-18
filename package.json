@@ -1,0 +1,22 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "a template project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IOT-boy/project-template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "iot boys",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IOT-boy/project-template/issues"
+  },
+  "homepage": "https://github.com/IOT-boy/project-template#readme"
+}
