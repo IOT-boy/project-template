@@ -1,11 +1,11 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const webpack = require('webpack');
+const webpack = require('webpack')
 
-const path = require('path');
+const path = require('path')
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: './src/main.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,16 +17,16 @@ module.exports = {
     rules: [
       {
         test: /.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /.js$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
+        test: /.(js|jsx)$/,
+        use: ['babel-loader', 'eslint-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -34,24 +34,24 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192
-            }
-          }
-        ]
+              limit: 8192,
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   devServer: {
     contentBase: './dist',
-    hot: true
-  }
-};
+    hot: true,
+  },
+}
