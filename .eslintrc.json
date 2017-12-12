@@ -19,6 +19,9 @@
   ],
   "rules": {
     "semi": ["error", "never"],
+    "no-console": ["error", {
+      "allow": ["log"]
+      }],
     "class-methods-use-this": ["off"]
   }
 }
